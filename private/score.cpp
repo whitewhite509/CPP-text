@@ -15,3 +15,7 @@ void Score::setALL(string name,int math)
     this->name=name;//舊換新
     this->math=math;
 }
+void Score::p()
+{
+    cout<<name<<" "<<math<<endl; 
+}
