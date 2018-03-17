@@ -13,7 +13,7 @@ int main()
     cin>>name>>math;
     score1.setALL(name,math);
     cin>>name>>math;
-    score2.setALL(name,math);
+    score2.setALL(name,math);//把內定的值改成新輸入的值 題目需求
     score1.p();
     score2.p();
 }
