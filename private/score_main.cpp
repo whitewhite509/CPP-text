@@ -11,7 +11,7 @@ int main()
     int math;
     
     cin>>name>>math;
-    score1.setALL(name,math);
+    score1.setALL(name,math);//把私人的參數回傳到 setall裡 但setall是不回傳的  
     cin>>name>>math;
     score2.setALL(name,math);//把內定的值改成新輸入的值 題目需求
     score1.p();
