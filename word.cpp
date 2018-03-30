@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <sstream>
 #include <string>
@@ -14,18 +15,18 @@ int main()
 {
     
   string text;
- getline ( cin , text) ;
+ getline (cin ,text) ;
 stringstream ss(text);
   
   int size;
   size=0;
   string word[10];
-  cout << "The words in the text are " << endl;
  
   while (!ss.eof())
   {
        ss >> word[size];
        printStringArray(word,size);
+     
   } 
 
 }
