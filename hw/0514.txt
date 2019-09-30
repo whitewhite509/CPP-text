@@ -1,0 +1,89 @@
+#include<iostream>
+#include<cstdlib>
+#include<ctime>
+using namespace std;
+int main()
+{
+	int i,j,a=1,b=0,c=0,lott[2][6];
+	srand((unsigned)time(NULL));
+	do
+	{
+	for(i=0;i<6;i++)
+	{
+	   lott[0][i]=1+(rand()%49);
+	   
+	   if(lott[0][i]==0)
+	     break;
+	  
+		for(j=0;j<i;j++)
+	  {
+			
+	   if(lott[0][i]==lott[0][j])
+	   {
+	      a=0;
+	      break;
+       }
+	  else
+	   { 
+	     a=1;
+       }
+	  }
+	  
+	  if(a==0)
+	    break;
+	}
+   }while(a!=1);
+   
+	cout<<"請輸入一組六個數字：";
+	do
+	{
+		for(i=0;i<6;i++)
+	   {
+	     cin>> lott[1][i];
+       
+		  for(j=0;j<i;j++)
+	     {
+	        if (lott[1][i]==lott[1][j])
+	        {
+	           b=0;
+	           cout<<"輸入錯誤，不可重複，請再次輸入。"<<'\n';
+	           i--;
+	           break;
+            }
+            else
+	        { 
+	           b=1;
+            }
+            
+            
+         }
+         
+         
+		
+       
+	   }
+}while(b!=1);
+
+for(i=0;i<6;i++)
+{
+  for(j=0;j<6;j++)
+  {
+    if(lott[0][i]==lott[1][j])
+      c++;
+  }
+}
+
+cout<<"您所猜的號碼：";
+	for(i=0;i<6;i++)
+	{
+	cout<<lott[1][i]<<" ";
+    }
+cout<<"\n猜對"<<c<<"個號碼"<<'\n'<<"號碼為"; 
+	for(i=0;i<6;i++)
+	{
+	cout<<lott[0][i]<<" ";
+    }
+cout<<'\n';
+	system("PAUSE");
+	return 0;
+}
