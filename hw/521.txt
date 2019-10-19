@@ -1,0 +1,36 @@
+#include<iostream>
+#include<cstdlib>
+
+
+using namespace std;
+
+int main()
+{
+	int i,j,k,num[11];
+	int *ptr;
+	ptr=num;
+	cout<<"輸入十組整數"<<endl; 
+	for(i=0;i<10;i++)
+	{
+
+		cin>>num[i];	
+		*ptr=num[i];
+	}	
+
+	cout<<"輸入一數字"<<endl;
+	cin>>k;
+	for(j=0;j<10;j++)
+	{
+	
+	if(k==num[j])
+	{
+		cout<<"第"<<j+1<<"位子中"<<endl;
+	}
+
+	}
+	 if (k!=num[j])
+	cout<<"無此數字"<<endl; 
+
+	system("pause");
+	return 0;
+} 
